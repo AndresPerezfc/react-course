@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { NuevoMundo, UserCard } from "./NuevoMundo";
+import { Boton } from "./Boton";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 function Saludos({ title, name = "user" }) {
@@ -16,6 +17,10 @@ function Saludos({ title, name = "user" }) {
 
 root.render(
   <>
+    <Boton text="Click me" />
+    <Boton text="Pay me" />
+    <Boton />
+
     <Saludos title="Hola React" />
     <NuevoMundo></NuevoMundo>
     <UserCard
