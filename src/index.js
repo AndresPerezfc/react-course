@@ -1,6 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { NuevoMundo, UserCard } from "./NuevoMundo";
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+function Saludos() {
+  const name = "Andrés";
 
-root.render(<h1>Hello World</h1>)
+  return <h1>{name}</h1>;
+}
+
+root.render(
+  <>
+    <Saludos />
+    <NuevoMundo></NuevoMundo>
+    <UserCard></UserCard>
+  </>
+);
