@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { NuevoMundo, UserCard } from "./NuevoMundo";
 import { Boton } from "./Boton";
+import { TaskCard } from "./Task";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 function Saludos({ title, name = "user" }) {
@@ -30,5 +31,7 @@ root.render(
       points={[99, 33, 22]}
       address={{ street: "123 Main Street", city: "New York" }}
     ></UserCard>
+
+    <TaskCard ready={true}></TaskCard>
   </>
 );
