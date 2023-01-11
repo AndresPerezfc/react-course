@@ -4,6 +4,7 @@ import { NuevoMundo, UserCard } from "./NuevoMundo";
 import { Boton } from "./Boton";
 import { TaskCard } from "./Task";
 import { Saludar } from "./Saludar";
+import { Posts } from "./Post";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 function Saludos({ title, name = "user" }) {
@@ -21,7 +22,10 @@ root.render(
   <>
     <Boton text="Click me" />
     <Boton text="Pay me" />
-    <Boton />
+    <Boton
+      text="Texto añadido para solucionar el error
+    "
+    />
 
     <Saludos title="Hola React" />
     <NuevoMundo></NuevoMundo>
@@ -36,5 +40,7 @@ root.render(
     <TaskCard ready={true}></TaskCard>
 
     <Saludar />
+
+    <Posts></Posts>
   </>
 );
