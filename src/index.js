@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { NuevoMundo, UserCard } from "./NuevoMundo";
 import { Boton } from "./Boton";
 import { TaskCard } from "./Task";
+import { Saludar } from "./Saludar";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 function Saludos({ title, name = "user" }) {
@@ -33,5 +34,7 @@ root.render(
     ></UserCard>
 
     <TaskCard ready={true}></TaskCard>
+
+    <Saludar />
   </>
 );
