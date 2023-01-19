@@ -7,6 +7,29 @@ import { Saludar } from "./Saludar";
 import { Posts } from "./Post";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+const users = [
+  {
+    id: 1,
+    image: "https://robohash.org/user",
+    name: "andres",
+  },
+  {
+    id: 2,
+    image: "https://robohash.org/user2",
+    name: "Felipe",
+  },
+  {
+    id: 3,
+    image: "https://robohash.org/user3",
+    name: "Pérez",
+  },
+  {
+    id: 4,
+    image: "https://robohash.org/user4",
+    name: "Campo",
+  },
+];
+
 function Saludos({ title, name = "user" }) {
   //const name = "Andrés";
   console.log("");
@@ -42,5 +65,16 @@ root.render(
     <Saludar />
 
     <Posts></Posts>
+
+    {users.map((user, index) => {
+      //return
+
+      return (
+        <div key={index}>
+          <h1>{user.name + " " + (index + 1)}</h1>;
+          <img src={user.image} />
+        </div>
+      );
+    })}
   </>
 );
