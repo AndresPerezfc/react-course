@@ -6,16 +6,22 @@ import { TaskCard } from "./Task";
 import { Saludar } from "./Saludar";
 import { Posts } from "./Post";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-let counter = 10;
 
 function Counter() {
   const [counter, setCounter] = useState(0);
 
   const [mensaje, setMensaje] = useState("");
+
+  useEffect(
+    function () {
+      console.log("Render");
+    },
+    [counter]
+  );
+
   return (
     <div>
       <h1>Counter: {counter}</h1>
